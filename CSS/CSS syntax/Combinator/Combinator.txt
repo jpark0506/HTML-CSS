@@ -1,0 +1,18 @@
+Combinator를 위한 개념
+같은 레벨에 있는 요소들을 형제 관계(동위 관계)라고 한다.
+자신보다 1level위의 요소들을 부모 요소, 자신보다 1level 아래의 요소들을 자식 요소라고 한다
+자신보다 n level (n>=1) 아래인 요소들을 후손 요소라고 한다
+
+1.Descendant Combinator
+code -> selector A selector B
+셀럭터 A의 후손요소에서 셀렉터 B와 일치하는 요소들에게 속성을 적용한다
+2.Child Combinator
+code -> selector A > selector B
+셀렉터 A의 자식요소에서 셀렉터 B와 일치하는 요소들에게 속성을 적용한다
+3.Sibling Combinator
+ - Adjacent sibling combinator
+code -> selector A + selector B
+셀렉터 A의 형제 관계에 있는 요소들 중에 바로 뒤에 selector B가 있으면 B에 속성을 적용한다(바로 뒤라는 의미는 사이에 어떤 요소가 있으면 안된다는 이야기이다)
+ - General sibling combinator
+code -> selector A ~ selector B
+셀렉터 A와 형제 관계에 있는 요소들 중에 뒤에 selector B가 있으면 뒤에 있는 모든 B에 속성을 적용한다.
